@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/assets/images/favicon1.png">
+    <meta name="description" content="Multimediedesigner, alt mit værk, samlet ét sted">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Møller</title>
+    <link rel="stylesheet" href="./assets/stylesheet/style.css">
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="./assets/images/MarcM-logo.png" alt="">
+            </a>
+        </div>
+        <div class="menu-open" id="toggle-menu">
+            <iconify-icon class="open-icon" icon="fa6-solid:bars" style="color: #9ef9ff;" width="40"
+                height="40"></iconify-icon>
+        </div>
+        <div class="nav" id="nav-menu">
+            <ul>
+                <li><a class="nav-item" href="/projects/">Projekter</a></li>
+                <li><a class="nav-item" href="/documentation/">Dokumentation</a></li>
+                <li><a class="nav-item" href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="menu-close" id="close-menu">
+                <iconify-icon icon="fa6-solid:xmark" style="color: #9ef9ff;" width="40" height="40"></iconify-icon>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro" id="intro">
+        <div class="intro-content">
+            <div class="intro-img">
+                <img src="./assets/images/profil/Ikke-navngivet-4website.png" alt="">
+            </div>
+            <div class="intro-txt">
+                <span>Multimediedesigner</span>
+                <h1>Alt mit værk, samlet ét sted!</h1>
+                <a class="btn-style" href="#presentation">Se mere</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <hr class="layout-line">
+        <section class="presentation" id="presentation">
+            <div class="circle-title">
+                <span class="circle"></span>
+                <h1>Præsentation</h1>
+            </div>
+            <div class="pre-content">
+                <div class="pre-item pre-txt">
+                    <h2>Velkommen til min portfolio!</h2>
+                    <p> I denne præsentation vil jeg gennemgå mine projekter, jeg arbejder på under min uddannelse på
+                        Copenhagen Business Academy som
+                        multimediedesigner. Mit mål har altid været at skabe kreative digitale
+                        oplevelser og forøge mine kompentencer inden for webdesign og webudvikling. </p>
+                    <p>
+                        Mit fokus ligger på at forene en enkel og elegant æstetik med optimal funktionalitet ved
+                        hjælp af innovative og brugercentrerede løsninger. Jeg stræber mod at skabe designs, der ikke
+                        blot
+                        er inspirerende, men også etablerer meningsfulde forbindelser mellem mennesker og produkter.</p>
+                </div>
+                <button onclick="openPopup(event)">
+                    <div class="pre-item pre-image">
+                        <img src="./assets/video/video-image2.png" alt="">
+                        <div class="pre-icon">
+                            <iconify-icon class="icon-pre" icon="material-symbols-light:play-circle"
+                                style="color: #9ef9ff;" width="80" height="80"></iconify-icon>
+                            <h3>Se video</h3>
+                        </div>
+                    </div>
+                </button>
+
+            </div>
+
+            <div class="popup-overlay" onclick="closePopup()">
+                <span class="close" onclick="closePopup()">&times;</span>
+            </div>
+
+            <div class="popup-content" id="videoPopup">
+                <video class="video" controls>
+                    <source src="./assets/video//portfolio-video-intro.mp4">
+                </video>
+            </div>
+
+        </section>
+        <section id="projects" class="projects">
+            <div class="circle-title">
+                <span class="circle"></span>
+                <h1>Seneste projekter</h1>
+            </div>
+
+            <div class="pro-content">
+                <div class="pro-items">
+
+                    <a href="/projects/flow-1.4/">
+                        <div class="pro-item flow4">
+                            <img src="./assets/images/projects/pro-4-folder/pro-4-mob.png" alt="">
+                        </div>
+                    </a>
+                    <a href="/projects/flow-1.3/">
+                        <div class="pro-item flow3">
+                            <img src="./assets/images/projects/pro-3-folder/pro-3-web.png" alt="">
+                        </div>
+                    </a>
+                    <a href="/projects/flow-1.2/">
+                        <div class="pro-item flow2">
+                            <img src="./assets/images/projects/pro-2-folder/pro-2-mob.png" alt="">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="pro-btn">
+                    <a class="btn-style" href="/projects/">Se alle projekter</a>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="circle-title">
+                <span class="circle"></span>
+                <h1>Nuværende færdigheder</h1>
+            </div>
+            <div class="skills-content">
+                <div class="skills-txt">
+                    <h2>Skills overblik</h2>
+                    <p>Dette er mit personlig vurderede estimat over, hvilke skills og tekniske kompetencer,
+                        som jeg har i de forskellige programmer og kodesprog,
+                        der understøtter
+                        Webdesign og Webudvikling</p>
+
+                    <iconify-icon icon="game-icons:swords-emblem" width="100" height="100"
+                        style="color: #9ef9ff;"></iconify-icon>
+                </div>
+                <div class="skills-component">
+
+                    <div class="skills-btn">
+                        <button onclick="toggleWeb(1)">Webdesign</button>
+                        <hr>
+                        <button onclick="toggleWeb(2)">Webudvikling</button>
+                    </div>
+                    <div class="skills-item webdesign" id="webdes">
+                        <div class="meter-content">
+                            <div class="meter-grp">
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:figma" width="60" height="60"
+                                            style="color: #9ef9ff;"></iconify-icon>
+                                        <span>Figma</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="8" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="7" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:adobeillustrator" style="color: #9ef9ff;"
+                                            width="55" height="55"></iconify-icon>
+                                        <span>Illustrator</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="3" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meter-grp">
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:adobephotoshop" style="color: #9ef9ff;"
+                                            width="55" height="55"></iconify-icon>
+                                        <span>Photoshop</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="3" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="2" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:adobepremierepro" style="color: #9ef9ff;"
+                                            width="55" height="55"></iconify-icon>
+                                        <span>Premiere Pro</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-item webudvikling" id="webdev" style="display: none;">
+                        <div class="meter-content">
+                            <div class="meter-grp">
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="fa6-brands:html5" style="color: #9ef9ff;" width="60"
+                                            height="60"></iconify-icon>
+                                        <span>HTML</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="8" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="7" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="fa6-brands:css3-alt" style="color: #9ef9ff;" width="60"
+                                            height="60"></iconify-icon>
+                                        <span>CSS</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="7" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="6" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meter-grp">
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="fa6-brands:square-js" style="color: #9ef9ff;" width="55"
+                                            height="55"></iconify-icon>
+                                        <span>javaScript</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="5" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="3" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="fa6-brands:react" style="color: #9ef9ff;" width="60"
+                                            height="60"></iconify-icon>
+                                        <span>React</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <meter value="3" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="circle-title">
+                <span class="circle"></span>
+                <h1>Kontaktinformation</h1>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-container">
+                    <h2>Kontakt mig direkte</h2>
+                    <div class="contact-item">
+                        <iconify-icon icon="fa6-solid:house-chimney" style="color: #9ef9ff;" width="30"
+                            height="30"></iconify-icon>
+                        <a href="https://www.google.com/maps/place/2750+Ballerup/@55.7221462,12.3351801,5394m/data=!3m1!1e3!4m15!1m8!3m7!1s0x46525a9a3cb6ee11:0x5bae5581fa836a0d!2s2750+Ballerup!3b1!8m2!3d55.724508!4d12.354765!16zL20vMDEyaGM0!3m5!1s0x46525a9a3cb6ee11:0x5bae5581fa836a0d!8m2!3d55.724508!4d12.354765!16zL20vMDEyaGM0?entry=ttu"
+                            target="_blank">
+                            Ballerup, Danmark</a>
+                    </div>
+                    <div class="contact-item">
+                        <iconify-icon icon="fa6-solid:envelope" style="color: #9ef9ff;" width="30"
+                            height="30"></iconify-icon>
+                        <a href="mailto:marc-fck@hotmail.com">Send en mail</a>
+                    </div>
+                    <div class="contact-item">
+                        <iconify-icon icon="fa6-solid:phone-volume" style="color: #9ef9ff;" width="30"
+                            height="30"></iconify-icon>
+                        <a href="tel:+4522501703">Ring til mig +45 22 50 17 03</a>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <form novalidate class="form" id="form" onsubmit="return false">
+                        <h1>Bliv kontaktet</h1>
+                        <h2>Indtast dine kontaktoplysninger</h2>
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Navn" required>
+
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Mailadresse" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="phone" placeholder="Mobilnummer" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea style="resize: none;" placeholder="Hvad kan jeg hjælpe med?" name="text"
+                                id="message" cols="" rows="3"></textarea>
+                        </div>
+                        <div class="btn-group" id="btn-group">
+                            <button class="form-btn">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-item">
+                <ul>
+
+                    <li><a href="/">Forside</a></li>
+                    <li><a href="./projects/">Projekter</a></li>
+                    <li><a href="./documentation/">Dokumentation</a></li>
+                    <li><a href="/#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <span>&#xa9; 2024 Marcm.dk</span>
+            </div>
+            <div class="footer-item socials">
+                <a href="https://www.facebook.com/marcm1703" target="_blank"><iconify-icon
+                        icon="fa6-brands:square-facebook" style="color: #9ef9ff;" width="40"
+                        height="40"></iconify-icon></a>
+                <a href="https://www.linkedin.com/in/marcmoller/" target="_blank"><iconify-icon
+                        icon="fa6-brands:linkedin" style="color: #9ef9ff;" width="45" height="40"></iconify-icon></a>
+                <a href="https://github.com/MarcMadeIt" target="_blank"><iconify-icon icon="fa6-brands:square-github"
+                        style="color: #9ef9ff;" width="40" height="40"></iconify-icon></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./assets/javascript/script.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+</html>

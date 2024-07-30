@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <meta name="description" content="Nyd en Coca Cola - Få smagen af glæden">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca Cola</title>
+    <link rel="stylesheet" href="../cocacola-site/assets/style.css">
+</head>
+
+<body>
+
+    <div class="back-btn">
+        <a href="/projects/flow-4/#final-flow4"><i class="fa-solid fa-arrow-left"></i> Tilbage til Marcm.dk</a>
+    </div>
+    <!-- Snow effect, not activated -->
+    <div id="snow-container">
+    </div>
+    <div id="overlay"></div>
+
+    <div class="popup" id="popup">
+        <a id="closeButton"><i class="fa-solid fa-xmark"></i></a>
+        <div class="popup-content">
+            <div class="popup-title">
+                <h1>Deltag i vores julekonkurrence</h1>
+                <h4>Tilmeld dig vores nyhedsbrev og deltag i lodtrækningen om en julerejse for 4 personer til
+                    New York med alt arrangeret! <br> <br> Præmien har en værdi af 120.000 kr!</h4>
+            </div>
+
+            <div class="popup-items">
+
+
+                <div class="popup-item">
+
+                    <input class="input" type="text" required placeholder="Fulde navn">
+                    <input class="input" type="text" required placeholder="Mailadresse">
+                    <input class="input" type="text" required placeholder="Mobilnummer">
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>Accepter at vi må sende mails og samt vores <span> vilkår og betingelser</span></p>
+                    </div>
+                    <button id="confirmButton" onclick="confirmPopupContent()" type="submit">Bekræft</button>
+                </div>
+                <div class="popup-item">
+                    <img src="./assets/img/julesok.png" alt="Julesok">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <ul>
+            <li><a href="#video">Julevideo</a></li>
+            <li><a href="#info">Nyheder</a></li>
+            <li><a href="#event">Vind præmier</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="intro" id="intro">
+            <div class="logo-content">
+
+                <img class="logo" src="./assets/img/Coca-Cola-Logo2.png" alt="Rødt Coca Cola logo">
+                <img class="deco" src="./assets/img/kugle 3.png" alt="Grøn julekugle">
+                <img class="deco4" src="./assets/img/kugle 2.png" alt="Rød julekugle">
+            </div>
+        </section>
+        <section class="info" id="info">
+            <div class="content">
+                <div class="content-img">
+                    <img class="zero" src="./assets/img/387628657_640111651379055_5264683389929811793_n.png"
+                        alt="Coca Cola Classic glas flaske">
+                </div>
+                <div class="content-txt">
+                    <h2>Classic</h2>
+                    <p>Classic Coca-Cola er en ikonisk læskedrik, der har fortryllet smagsløgene på mennesker over
+                        hele
+                        verden i årtier. Med sin karakteristiske smag af kulsyreholdigt vand, sukker, og hemmelige
+                        naturlige aromaer, er denne sodavand blevet et symbol på forfriskning og hygge.</p>
+                    <a target="_blank"
+                        href="https://www.coca-cola.com/dk/da/brands/coca-cola#accordion-932799e972-item-37bca91eaa">Læs
+                        mere</a>
+                </div>
+                <img class="deco2" src="./assets/img/kugle.png" alt="Grøn julekugle">
+
+            </div>
+            <div class="content">
+                <div class="content-img">
+                    <img class="classic" src="./assets/img/380732755_313774064844209_7173773923391396053_n.png"
+                        alt="Coca Cola Zero glas flaske">
+                </div>
+                <div class="content-txt">
+                    <h2>Zero</h2>
+                    <p>
+                        Coca-Cola Zero er en sukkerfri variation af den klassiske Coca-Cola, der har vundet
+                        popularitet
+                        blandt dem, der ønsker den samme forfriskende smag uden kalorier. Lanceringen af Coca-Cola
+                        Zero
+                        var et svar på efterspørgslen efter en sodavand med den autentiske smag af Coca-Cola, men
+                        uden
+                        sukker.
+                    </p>
+                    <a target="_blank"
+                        href="https://www.coca-cola.com/dk/da/brands/coca-cola#accordion-932799e972-item-37bca91eaa">Læs
+                        mere</a>
+                </div>
+                <img class="deco3" src="./assets/img/candy cane.png" alt="Stribet slikstok">
+            </div>
+        </section>
+        </section>
+        <section class="video-content" id="video">
+            <div class="video-title">
+                <h1>Få smagen af glæden</h1>
+            </div>
+            <div class="video-clip">
+                <video class="video" controls autoplay muted>
+                    <source src="./assets/video/CocaColaClip.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section class="event" id="event">
+            <h1 class="event-title">Vind fede Præmier!</h1>
+            <div class="event-content">
+                <div class="event-item">
+                    <h3>Er du den heldige?</h3>
+                    <p>Deltag i konkurrencen og få chancen for at blive en del af Coca-Colas kreative rejse. Vi ser
+                        frem
+                        til at udforske verdenen af smag, glæde og fællesskab sammen med dig. Lad kreativiteten
+                        strømme,
+                        og lad Coca-Cola være din inspiration til at skabe noget virkelig enestående!</p>
+                    <button id="openButton" class="btn" onclick="openPopup()">Deltag nu</button>
+                </div>
+                <div class="event-item">
+                    <img src="./assets/img/reklame.jpg" alt="Coca Cola Julebillede">
+                </div>
+            </div>
+            <h1 class="hashtag"><span>#</span>GodCocaColaJul</h1>
+        </section>
+    </main>
+
+    <footer>
+        <div class="left">
+            <h3>Coca Cola Denmark A/S</h3>
+            <hr>
+            <span>&#169; The Coca-Cola Company. All right reserved</span>
+        </div>
+        <div class="right">
+            <h3>Følg os</h3>
+            <hr>
+            <ul>
+                <li><a target="_blank" href="https://www.facebook.com/cocacoladk/?locale=da_DK"><i
+                            class="fa-brands fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/cocacoladk/"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/coketvdk"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li><a target="_blank" href="https://twitter.com/CocaColaDK"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="./assets/script.js"></script>
+<script src="https://kit.fontawesome.com/784b2ea854.js" crossorigin="anonymous"></script>
+
+</html>
