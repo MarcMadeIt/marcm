@@ -103,3 +103,4 @@ function closePopup() {
         video.pause();
     }
 }
+

@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/png" href="../assets/images/favicon1.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta name="description" content="Multimediedesigner, alt mit værk, samlet ét sted">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Møller - Projekter</title>
-    <link rel="stylesheet" href="../assets/stylesheet/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <header>
         <div class="logo">
             <a href="/">
-                <img src="../assets/images/MarcM-logo.png" alt="">
+                <img src="../assets/img/MarcM-logo.png" alt="">
             </a>
         </div>
 
@@ -40,12 +40,31 @@
                 <h1>Alle projekter</h1>
             </div>
         </div>
-        <div class="cards">
+        <div class="cards" id="projectCards">
+            <a href="https://game.marcm.dk">
+                <div class="card">
+                    <img class="batch" src="../assets/img/projects/batch/3-Semester.png" alt="">
+                    <div class="card-img">
+                        <img src="../assets/img/projects/pro-3.1-folder/pro-3.1-mob.png" alt="">
+                    </div>
+                    <h3>Flow 1</h3>
+                    <h4>Spil Projekt</h4>
+                    <div class="tags">
+                        <span>#HTML</span>
+                        <span>#CSS</span>
+                        <span>#JS</span>
+                    </div>
+                    <p>Spilprojektet har givet endnu flere kompetencer med Javascript. Pointsystem med købemulighed.
+                        Brugen af localstorage til
+                        at opbevare brugernes oplysninger.</p>
+                    <button>Se projektet</button>
+                </div>
+            </a>
             <a href="https://micromate.dk">
                 <div class="card">
-                    <img class="batch" src="../assets/images/2semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/2-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-2.4-folder/pro-2.4-desktop.png" alt="">
+                        <img src="../assets/img/projects/pro-2.4-folder/pro-2.4-desktop.png" alt="">
                     </div>
                     <h3>Flow 4</h3>
                     <h4>Eksamensprojekt</h4>
@@ -58,14 +77,14 @@
                     </div>
                     <p>Eksamensprojekt til 2. semester var at konstruere en læringsoplevelse. Et fundamental base fra
                         alt den undervisning der er blevet gennemgået i løbet af det halve år. </p>
-                    <button>Se processen</button>
+                    <button>Se projektet</button>
                 </div>
             </a>
-            <a href="">
+            <a href="https://tmz.marcm.dk">
                 <div class="card">
-                    <img class="batch" src="../assets/images/2semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/2-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-2.3-folder/pro-2.3-desktop.png" alt="">
+                        <img src="../assets/img/projects/pro-2.3-folder/pro-2.3-desktop.png" alt="">
                     </div>
                     <h3>Flow 3</h3>
                     <h4>CSS Frameworks: Bootstrap</h4>
@@ -76,14 +95,14 @@
                     </div>
                     <p>Dette flow blev der undervist i de mest anvendte CSS frameworks, i dette tilfælde bootstrap.
                         Gennemgået forskellige komponenter og styling af forskellige elementer. </p>
-                    <button>Se processen</button>
+                    <button>Se projektet</button>
                 </div>
             </a>
-            <a href="">
+            <a href="https://jk.marcm.dk">
                 <div class="card">
-                    <img class="batch" src="../assets/images/2semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/2-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-2.2-folder/pro-2.3-desktop.png" alt="">
+                        <img src="../assets/img/projects/pro-2.2-folder/pro-2.3-desktop.png" alt="">
                     </div>
                     <h3>Flow 2</h3>
                     <h4>Catering hjemmeside & Kontaktformular </h4>
@@ -92,17 +111,18 @@
                         <span>#CSS</span>
                         <span>#JS</span>
                     </div>
-                    <p> Dette projekt var primært at få lært grundlæggende JavaScript. Dertil at få kendskab til at
+                    <p>
+                        Dette projekt var primært at få lært grundlæggende JavaScript. Dertil at få kendskab til at
                         fetch noget data fra en mindre database og opsætning af kontaktsformular ved hjælp Email JS.
                     </p>
-                    <button>Se processen</button>
+                    <button>Se projektet</button>
                 </div>
             </a>
-            <a href="">
+            <a href="https://wordpress.marcm.dk">
                 <div class="card">
-                    <img class="batch" src="../assets/images/2semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/2-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-2.1-folder/project-2-1-mob.png" alt="">
+                        <img src="../assets/img/projects/pro-2.1-folder/project-2-1-mob.png" alt="">
                     </div>
                     <h3>FLow 1</h3>
                     <h4>Wordpress & SEO optimering</h4>
@@ -111,17 +131,17 @@
                         <span>#Elementor</span>
                         <span>#PS</span>
                     </div>
-                    <p>I dette projekt, var det fokus på opsætning af hjemmeside i Wordpress samt opsætning af SEO
+                    <p>I dette projekt, var det fokus på opsætning af hjemmeside i Wordpress samt opsætning af SEO.
                         Optimering ved hjælp af forskellige nyttige plugins.</p>
-                    <button>Se processen</button>
+                    <button>Se projektet</button>
                 </div>
             </a>
 
             <a href="/projects/flow-1.4/">
                 <div class="card">
-                    <img class="batch" src="../assets/images/1semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/1-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-4-folder/pro-4-mob.png" alt="">
+                        <img src="../assets/img/projects/pro-4-folder/pro-4-mob.png" alt="">
                     </div>
                     <h3>Flow 4</h3>
                     <h4>Kampagne på tværs af platforme</h4>
@@ -135,9 +155,9 @@
             </a>
             <a href="/projects/flow-1.3/">
                 <div class="card">
-                    <img class="batch" src="../assets/images/1semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/1-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-3-folder/pro-3-web.png" alt="">
+                        <img src="../assets/img/projects/pro-3-folder/pro-3-web.png" alt="">
                     </div>
                     <h3>Flow 3</h3>
                     <h4>Webdesign med HTML & CSS</h4>
@@ -151,9 +171,9 @@
             </a>
             <a href="/projects/flow-1.2/">
                 <div class="card">
-                    <img class="batch" src="../assets/images/1semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/1-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-2-folder/pro-2-mob.png" alt="">
+                        <img src="../assets/img/projects/pro-2-folder/pro-2-mob.png" alt="">
                     </div>
                     <h3>Flow 2 </h3>
                     <h4>Visuelt koncept & printede medier</h4>
@@ -169,9 +189,9 @@
 
             <a href="/projects/flow-1.1/">
                 <div class="card">
-                    <img class="batch" src="../assets/images/1semester.png" alt="">
+                    <img class="batch" src="../assets/img/projects/batch/1-Semester.png" alt="">
                     <div class="card-img">
-                        <img src="../assets/images/projects/pro-1-folder/pro-1-mac4.png" alt="">
+                        <img src="../assets/img/projects/pro-1-folder/pro-1-web.png" alt="">
                     </div>
                     <h3>Flow 1</h3>
                     <h4>Billedbehandling & prototype</h4>
@@ -189,7 +209,6 @@
         <div class="footer-content">
             <div class="footer-item">
                 <ul>
-                    <li><a href="/">Forside</a></li>
                     <li><a href="#">Projekter</a></li>
                     <li><a href="../documentation/">Dokumentation</a></li>
                     <li><a href="/#contact">Kontakt</a></li>
@@ -210,7 +229,8 @@
         </div>
     </footer>
 </body>
-<script src="../assets/javascript/script.js"></script>
+<script src="../src/js/index.js"></script>
+<script src="../src/js/projects.js"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 
 </html>

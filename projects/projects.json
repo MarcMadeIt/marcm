@@ -1,0 +1,83 @@
+[
+    {
+        "projectName": "Spil Projekt",
+        "projectFlow": "Flow 1",
+        "projectDesc": "Spilprojektet har givet endnu flere kompetencer med Javascript. Pointsystem med købemulighed. Brugen af localstorage til at opbevare brugernes oplysninger.",
+        "projectLink": "https://game.marcm.dk",
+        "projectSkills": ["#HTML", "#CSS", "#JS"],
+        "projectImg": "../assets/img/projects/pro-3.1-folder/pro-3.1-mob.png",
+        "projectBatch": "../assets/img/projects/batch/3-semester.png"
+    },
+    {
+        "projectName": "Eksamensprojekt",
+        "projectFlow": "Flow 4",
+        "projectDesc": "Eksamensprojekt til 2. semester var at konstruere en læringsoplevelse. Et fundamental base fra alt den undervisning der er blevet gennemgået i løbet af det halve år.",
+        "projectLink": "https://micromate.dk",
+        "projectSkills": ["#HTML", "#CSS", "#JS", "#Figma", "#Illustrator"],
+        "projectImg": "../assets/img/projects/pro-2.4-folder/pro-2.4-desktop.png",
+        "projectBatch": "../assets/img/projects/batch/2-Semester.png"
+    },
+    {
+        "projectName": "CSS Framework: Bootstrap",
+        "projectFlow": "Flow 3",
+        "projectDesc": "Dette flow blev der undervist i at anvende et CSS frameworks, i dette tilfælde bootstrap. Gennemgået forskellige komponenter og styling af forskellige elementer.",
+        "projectLink": "https://tmz.marcm.dk",
+        "projectSkills": ["#HTML", "#CSS", "#Bootstrap" ],
+        "projectImg": "../assets/img/projects/pro-2.3-folder/pro-2.3-desktop.png",
+        "projectBatch": "../assets/img/projects/batch/2-Semester.png"
+    },
+    {
+        "projectName": "Data Fetching & Email JS",
+        "projectFlow": "Flow 2",
+        "projectDesc": "Dette projekt var primært at få lært grundlæggende JavaScript. Dertil at få kendskab til at fetch noget data fra en mindre database og opsætning af kontaktsformular ved hjælp Email JS.",
+        "projectLink": "https://jk.marcm.dk",
+        "projectSkills": ["#HTML", "#CSS", "#JS"],
+        "projectImg": "../assets/img/projects/pro-2.2-folder/pro-2.3-desktop.png",
+        "projectBatch": "../assets/img/projects/batch/2-Semester.png"
+    },
+    {
+        "projectName": "Wordpress & SEO optimering",
+        "projectFlow": "Flow 1",
+        "projectDesc": "I dette projekt, var det fokus på opsætning af hjemmeside i Wordpress samt opsætning af SEO. Optimering ved hjælp af forskellige nyttige plugins..",
+        "projectLink": "https://wordpress.marcm.dk",
+        "projectSkills": ["#WordpressL", "#Elementor", "#SEO", "#PS"],
+        "projectImg": "../assets/img/projects/pro-2.1-folder/project-2-1-mob.png",
+        "projectBatch": "../assets/img/projects/batch/2-semester.png"
+    },
+    {
+        "projectName": "Kampagne på tværs af platforme",
+        "projectFlow": "Flow 4",
+        "projectDesc": "Et andet spilprojekt, som tilføjer nye funktioner med React og NodeJS.",
+        "projectLink": "/projects/flow-1.4/",
+        "projectSkills": ["PremierPro", "#Illustrator", "#Figma", "HTML", "CSS", "JS"],
+        "projectImg": "../assets/img/projects/pro-4-folder/pro-4-mob.png",
+        "projectBatch": "../assets/img/projects/batch/1-semester.png"
+    },
+    {
+        "projectName": "Webdesign med HTML & CSS",
+        "projectFlow": "Flow 3",
+        "projectDesc": "Så var det tid til at lave et kodningsprojekt, hvor vi skulle lave en hjemmeside for en politikkers eget univers, der indeholdte politiske udtryk, holdninger og standpunkter.",
+        "projectLink": "/projects/flow-1.3/",
+        "projectSkills": ["#HTML", "#CSS", "#JS", "Figma"],
+        "projectImg": "../assets/img/projects/pro-3-folder/pro-3-web.png",
+        "projectBatch": "../assets/img/projects/batch/1-Semester.png"
+    },
+    {
+        "projectName": "Visuelt koncept & printede medier",
+        "projectFlow": "Flow 2",
+        "projectDesc": "Dette var mit andet projekt, hvor formålet var at konstruere wireframes, hvilket blevet øvet i forbindelse med et event for unge.",
+        "projectLink": "/projects/flow-1.2/",
+        "projectSkills": ["#Photoshop", "#Illustrator", "#Figma"],
+        "projectImg": "../assets/img/projects/pro-2-folder/pro-2-mob.png",
+        "projectBatch": "../assets/img/projects/batch/1-Semester.png"
+    },
+    {
+        "projectName": "Billedbehandling & prototype",
+        "projectFlow": "Flow 1",
+        "projectDesc": "Et andet spilprojekt, som tilføjer nye funktioner med React og NodeJS.",
+        "projectLink": "/projects/flow-1.1/",
+        "projectSkills": ["#Photoshop", "#Illustrator", "#Figma"],
+        "projectImg": "../assets/img/projects/pro-1-folder/pro-1-web.png",
+        "projectBatch": "../assets/img/projects/batch/1-Semester.png"
+    }
+]

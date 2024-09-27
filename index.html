@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/png" href="/assets/images/favicon1.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
     <meta name="description" content="Multimediedesigner, alt mit værk, samlet ét sted">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Møller</title>
-    <link rel="stylesheet" href="./assets/stylesheet/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <header>
         <div class="logo">
             <a href="/">
-                <img src="./assets/images/MarcM-logo.png" alt="">
+                <img src="./assets/img/MarcM-logo.png" alt="">
             </a>
         </div>
         <div class="menu-open" id="toggle-menu">
@@ -37,7 +37,7 @@
     <div class="intro" id="intro">
         <div class="intro-content">
             <div class="intro-img">
-                <img src="./assets/images/profil/Ikke-navngivet-4website.png" alt="">
+                <img src="./assets/img/profile/profile-website.png" alt="">
             </div>
             <div class="intro-txt">
                 <span>Multimediedesigner</span>
@@ -56,15 +56,14 @@
             <div class="pre-content">
                 <div class="pre-item pre-txt">
                     <h2>Velkommen til min portfolio!</h2>
-                    <p> I denne præsentation vil jeg gennemgå mine projekter, jeg arbejder på under min uddannelse på
-                        Copenhagen Business Academy som
-                        multimediedesigner. Mit mål har altid været at skabe kreative digitale
-                        oplevelser og forøge mine kompentencer inden for webdesign og webudvikling. </p>
+                    <p> Her vil du kunne se mine seneste projekter, som jeg har udviklet på undervejs i uddannelsen som
+                        Multimediedesigner. Er lige flyttet fra København til Billund og går nu på IBA Kolding.
+                    </p>
                     <p>
-                        Mit fokus ligger på at forene en enkel og elegant æstetik med optimal funktionalitet ved
-                        hjælp af innovative og brugercentrerede løsninger. Jeg stræber mod at skabe designs, der ikke
-                        blot
-                        er inspirerende, men også etablerer meningsfulde forbindelser mellem mennesker og produkter.</p>
+                        Mit mål har altid været at skabe kreative digitale
+                        oplevelser og forøge mine kompentencer inden for webdesign og webudvikling. Mit fokus ligger på
+                        at forene en enkel og elegant æstetik med optimal funktionalitet ved
+                        hjælp af innovative og brugercentrerede løsninger. </p>
                 </div>
                 <button onclick="openPopup(event)">
                     <div class="pre-item pre-image">
@@ -95,25 +94,9 @@
                 <span class="circle"></span>
                 <h1>Seneste projekter</h1>
             </div>
-
+            <!-- Fetcher fra project.json -->
             <div class="pro-content">
-                <div class="pro-items">
-
-                    <a href="/projects/flow-1.4/">
-                        <div class="pro-item flow4">
-                            <img src="./assets/images/projects/pro-4-folder/pro-4-mob.png" alt="">
-                        </div>
-                    </a>
-                    <a href="/projects/flow-1.3/">
-                        <div class="pro-item flow3">
-                            <img src="./assets/images/projects/pro-3-folder/pro-3-web.png" alt="">
-                        </div>
-                    </a>
-                    <a href="/projects/flow-1.2/">
-                        <div class="pro-item flow2">
-                            <img src="./assets/images/projects/pro-2-folder/pro-2-mob.png" alt="">
-                        </div>
-                    </a>
+                <div class="pro-items" id="projectLatest">
 
                 </div>
                 <div class="pro-btn">
@@ -154,9 +137,9 @@
                                         <span>Figma</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="8" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="7" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -167,9 +150,9 @@
                                         <span>Illustrator</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="4" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="3" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -182,9 +165,9 @@
                                         <span>Photoshop</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="3" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="2" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -195,9 +178,9 @@
                                         <span>Premiere Pro</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="4" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="4" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -214,9 +197,9 @@
                                         <span>HTML</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="8" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="7" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -227,9 +210,9 @@
                                         <span>CSS</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="7" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="6" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -242,9 +225,9 @@
                                         <span>javaScript</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="5" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="3" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -255,9 +238,9 @@
                                         <span>React</span>
                                     </div>
                                     <div class="meter-para">
-                                        <label for="disk_a">Færdighedsniveau</label>
+                                        <label>Færdighedsniveau</label>
                                         <meter value="4" min="0" max="10"></meter>
-                                        <label for="disk_a">Tekniske Kompetencer</label>
+                                        <label>Tekniske Kompetencer</label>
                                         <meter value="3" min="0" max="10"></meter>
                                     </div>
                                 </div>
@@ -279,9 +262,9 @@
                     <div class="contact-item">
                         <iconify-icon icon="fa6-solid:house-chimney" style="color: #9ef9ff;" width="30"
                             height="30"></iconify-icon>
-                        <a href="https://www.google.com/maps/place/2750+Ballerup/@55.7221462,12.3351801,5394m/data=!3m1!1e3!4m15!1m8!3m7!1s0x46525a9a3cb6ee11:0x5bae5581fa836a0d!2s2750+Ballerup!3b1!8m2!3d55.724508!4d12.354765!16zL20vMDEyaGM0!3m5!1s0x46525a9a3cb6ee11:0x5bae5581fa836a0d!8m2!3d55.724508!4d12.354765!16zL20vMDEyaGM0?entry=ttu"
+                        <a href="https://www.google.com/maps/place/7190+Billund/@55.7308625,8.9982095,12z/data=!3m1!4b1!4m6!3m5!1s0x464b7223afe241b3:0x89be7375803be832!8m2!3d55.728449!4d9.112366!16s%2Fm%2F05b6m79?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank">
-                            Ballerup, Danmark</a>
+                            Billund, Danmark</a>
                     </div>
                     <div class="contact-item">
                         <iconify-icon icon="fa6-solid:envelope" style="color: #9ef9ff;" width="30"
@@ -324,8 +307,6 @@
         <div class="footer-content">
             <div class="footer-item">
                 <ul>
-
-                    <li><a href="/">Forside</a></li>
                     <li><a href="./projects/">Projekter</a></li>
                     <li><a href="./documentation/">Dokumentation</a></li>
                     <li><a href="/#contact">Kontakt</a></li>
@@ -346,7 +327,8 @@
         </div>
     </footer>
 </body>
-<script src="./assets/javascript/script.js"></script>
+<script src="./src/js/index.js"></script>
+<script src="./src/js/projects.js"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 
 </html>

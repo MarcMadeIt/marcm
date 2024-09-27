@@ -710,47 +710,61 @@ section {
 .pro-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 6px;
     height: 350px;
     width: 400px;
     transition: all 1s ease-in;
     position: relative;
     box-shadow: #00000073 0 0 15px;
+    overflow: hidden;
 }
 
 .pro-item:before {
-
+    content: "";
     display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--secondary);
     position: absolute;
     left: 0;
     bottom: 0;
     width: calc(100% + 2px);
     height: calc(100% + 2px);
-    background: rgb(5, 18, 31);
-    background: linear-gradient(133deg, rgba(5, 18, 31, 1) 15%, rgba(11, 29, 46, 1) 75%);
     border-radius: 6px;
     z-index: 1;
     transition: 0.5s;
+    opacity: 0.7;
+    z-index: 2;
+    background: rgb(5, 18, 31);
+    background: linear-gradient(133deg, rgba(5, 18, 31, 1) 15%, rgba(11, 29, 46, 1) 75%);
+}
+
+.flow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: var(--secondary);
+    font-weight: 500;
+    text-align: center;
     font-size: 20px;
-    opacity: 0.9;
+    transition: 0.4s ease-in;
 }
 
-.flow2:before {
-    content: 'Flow 2 - Figma';
+.latest-batch {
+    position: absolute;
+    width: auto;
+    height: 38px;
+    transform: rotate(-35deg);
+    z-index: 5;
+    top: 26px;
+    left: -90px;
+    opacity: 1;
+    transition: 0.3s ease-in;
 }
 
-.flow3:before {
-    content: 'Flow 3 - Website';
-}
-
-.flow4:before {
-    content: 'Flow 4 - Kampagne';
-}
-
-.pro-item img {
+.pro-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -759,24 +773,39 @@ section {
     opacity: 0.7;
 }
 
-.pro-item:hover:before {
-    opacity: 0;
-}
+@media screen and (min-width: 600px) {
 
-.pro-item:hover img {
-    filter: blur(0px);
+
+    .pro-item:hover:before {
+        opacity: 0;
+    }
+
+    .pro-item:hover .pro-img {
+        filter: blur(0px);
+    }
+
+    .pro-item:hover .flow-text {
+        opacity: 0;
+    }
+
 }
 
 
 @media screen and (max-width: 1450px) {
 
     .pro-item {
-        height: 350px;
+        height: 300px;
         width: 250px;
     }
 
-    .pro-item img {
+    .pro-img {
         transform: scale(1.08);
+    }
+
+    .latest-batch {
+        height: 30px;
+        top: 22px;
+        left: -70px;
     }
 }
 
@@ -794,6 +823,8 @@ section {
         height: 250px;
         width: 250px;
     }
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -802,19 +833,21 @@ section {
         padding: 0 10px 0 30px;
     }
 
-    .pro-item img {
-
-        opacity: 95%;
-    }
 
     .pro-item:before {
 
-        opacity: 0.8;
+        opacity: 0.5;
     }
 
     .pro-item:hover:before {
         opacity: 0.8;
     }
+
+    .flow-text {
+        font-size: 16px;
+    }
+
+
 }
 
 /*  Skills --------------------------------------------------------Skills */
@@ -1271,8 +1304,8 @@ section {
     height: 30px;
     transform: rotate(-35deg);
     z-index: 5;
-    top: 20px;
-    left: -55px;
+    top: 22px;
+    left: -70px;
     opacity: 1;
 }
 
@@ -1319,7 +1352,7 @@ section {
 .card h4 {
     color: var(--text-2);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .card p {
