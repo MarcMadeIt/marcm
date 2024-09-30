@@ -171,11 +171,11 @@ const loadLatest = async () => {
 window.onload = () => {
     const path = window.location.pathname;
 
-    if (path.includes("index.html") || path === "/") {
+    if (path.includes("/") || path === "") {
         loadLatest();
     }
 
-    if (path.includes("projects.html")) {
+    if (path.includes("/projects/")) {
         loadProjects();
     }
 };

@@ -15,7 +15,7 @@
         "projectLink": "https://micromate.dk",
         "projectSkills": ["#HTML", "#CSS", "#JS", "#Figma", "#Illustrator"],
         "projectImg": "../assets/img/projects/pro-2.4-folder/pro-2.4-desktop.png",
-        "projectBatch": "../assets/img/projects/batch/2-Semester.png"
+        "projectBatch": "../assets/img/projects/batch/2-semester.png"
     },
     {
         "projectName": "CSS Framework: Bootstrap",
@@ -24,7 +24,7 @@
         "projectLink": "https://tmz.marcm.dk",
         "projectSkills": ["#HTML", "#CSS", "#Bootstrap" ],
         "projectImg": "../assets/img/projects/pro-2.3-folder/pro-2.3-desktop.png",
-        "projectBatch": "../assets/img/projects/batch/2-Semester.png"
+        "projectBatch": "../assets/img/projects/batch/2-semester.png"
     },
     {
         "projectName": "Data Fetching & Email JS",
@@ -33,7 +33,7 @@
         "projectLink": "https://jk.marcm.dk",
         "projectSkills": ["#HTML", "#CSS", "#JS"],
         "projectImg": "../assets/img/projects/pro-2.2-folder/pro-2.3-desktop.png",
-        "projectBatch": "../assets/img/projects/batch/2-Semester.png"
+        "projectBatch": "../assets/img/projects/batch/2-semester.png"
     },
     {
         "projectName": "Wordpress & SEO optimering",
@@ -60,7 +60,7 @@
         "projectLink": "/projects/flow-1.3/",
         "projectSkills": ["#HTML", "#CSS", "#JS", "Figma"],
         "projectImg": "../assets/img/projects/pro-3-folder/pro-3-web.png",
-        "projectBatch": "../assets/img/projects/batch/1-Semester.png"
+        "projectBatch": "../assets/img/projects/batch/1-semester.png"
     },
     {
         "projectName": "Visuelt koncept & printede medier",
@@ -69,7 +69,7 @@
         "projectLink": "/projects/flow-1.2/",
         "projectSkills": ["#Photoshop", "#Illustrator", "#Figma"],
         "projectImg": "../assets/img/projects/pro-2-folder/pro-2-mob.png",
-        "projectBatch": "../assets/img/projects/batch/1-Semester.png"
+        "projectBatch": "../assets/img/projects/batch/1-semester.png"
     },
     {
         "projectName": "Billedbehandling & prototype",
@@ -78,6 +78,6 @@
         "projectLink": "/projects/flow-1.1/",
         "projectSkills": ["#Photoshop", "#Illustrator", "#Figma"],
         "projectImg": "../assets/img/projects/pro-1-folder/pro-1-web.png",
-        "projectBatch": "../assets/img/projects/batch/1-Semester.png"
+        "projectBatch": "../assets/img/projects/batch/1-semester.png"
     }
 ]
