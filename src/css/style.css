@@ -62,16 +62,18 @@ body {
 
 .btn-active {
     padding: 5px 15px;
-    background-color: var(--text);
+    background-color: var(--secondary);
     color: var(--primary);
     border-radius: 6px;
     border: 1px solid var(--ekstra-2);
     transition: all 500ms;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
-
-.btn-style:active {
+.btn-active:hover {
     background-color: var(--primary);
     color: var(--secondary);
     transition: all 500ms;
@@ -191,11 +193,13 @@ header {
 
 .menu-open {
     display: none;
+    cursor: pointer;
 }
 
 .menu-close {
     display: none;
     height: 40px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 980px) {
@@ -242,7 +246,7 @@ header {
         display: block;
         position: absolute;
         top: 30px;
-        right: 10px;
+        right: 25px;
     }
 
     .show {
@@ -1603,8 +1607,14 @@ section {
     max-width: 1250px;
 }
 
-.doc-item:nth-child(even) {
+
+.process-item:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+
+.doc-planning {
+    flex-direction: column;
 }
 
 .doc-txt {
@@ -1617,6 +1627,10 @@ section {
     letter-spacing: 0.5px;
 }
 
+.doc-plan-txt {
+    width: 70%;
+}
+
 .doc-txt h2 {
     color: var(--ekstra-1);
     font-size: 80px;
@@ -1625,10 +1639,7 @@ section {
     left: 30px;
 }
 
-.doc-item:nth-child(even) h2 {
-    right: 30px;
-    left: auto;
-}
+
 
 .doc-txt ul {
     padding-left: 20px;
@@ -1677,7 +1688,7 @@ section {
 @media screen and (max-width: 1200px) {
 
     .doc-content {
-        padding: 150px 30px 150px 30px;
+        padding: 50px 30px 150px 30px;
     }
 
     .doc-item:nth-child(even) h2 {
@@ -1708,6 +1719,10 @@ section {
     .process-3-col {
         justify-content: center;
         gap: 20px;
+    }
+
+    .doc-plan-txt {
+        width: 100%;
     }
 
 }
