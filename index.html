@@ -23,11 +23,14 @@
                 height="40"></iconify-icon>
         </div>
         <div class="nav" id="nav-menu">
-            <ul>
-                <li><a class="nav-item" href="/projects/">Projekter</a></li>
-                <li><a class="nav-item" href="/documentation/">Dokumentation</a></li>
-                <li><a class="nav-item" href="#contact">Kontakt</a></li>
-            </ul>
+            <div class="nav-content">
+                <ul>
+                    <li><a class="nav-item" href="/projects/">Projekter</a></li>
+                    <li><a class="nav-item" href="/documentation/">Dokumentation</a></li>
+                    <li><a class="nav-item" href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="nav-some" id="socials"></div>
+            </div>
             <div class="menu-close" id="close-menu">
                 <iconify-icon icon="fa6-solid:xmark" style="color: #9ef9ff;" width="40" height="40"></iconify-icon>
             </div>
@@ -122,72 +125,12 @@
                 </div>
                 <div class="skills-component">
 
-                    <div class="skills-btn">
-                        <button onclick="toggleWeb(1)">Webdesign</button>
+                    <div class="skills-buttons">
+                        <button class="skills-btn activeBtn" id="webdevBtn">Webudvikling</button>
                         <hr>
-                        <button onclick="toggleWeb(2)">Webudvikling</button>
+                        <button class="skills-btn" id="webdesBtn">Webdesign</button>
                     </div>
-                    <div class="skills-item webdesign" id="webdes">
-                        <div class="meter-content">
-                            <div class="meter-grp">
-                                <div class="meter-item">
-                                    <div class="meter-brand">
-                                        <iconify-icon icon="simple-icons:figma" width="60" height="60"
-                                            style="color: #9ef9ff;"></iconify-icon>
-                                        <span>Figma</span>
-                                    </div>
-                                    <div class="meter-para">
-                                        <label>Færdighedsniveau</label>
-                                        <meter value="8" min="0" max="10"></meter>
-                                        <label>Tekniske Kompetencer</label>
-                                        <meter value="7" min="0" max="10"></meter>
-                                    </div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-brand">
-                                        <iconify-icon icon="simple-icons:adobeillustrator" style="color: #9ef9ff;"
-                                            width="55" height="55"></iconify-icon>
-                                        <span>Illustrator</span>
-                                    </div>
-                                    <div class="meter-para">
-                                        <label>Færdighedsniveau</label>
-                                        <meter value="4" min="0" max="10"></meter>
-                                        <label>Tekniske Kompetencer</label>
-                                        <meter value="3" min="0" max="10"></meter>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="meter-grp">
-                                <div class="meter-item">
-                                    <div class="meter-brand">
-                                        <iconify-icon icon="simple-icons:adobephotoshop" style="color: #9ef9ff;"
-                                            width="55" height="55"></iconify-icon>
-                                        <span>Photoshop</span>
-                                    </div>
-                                    <div class="meter-para">
-                                        <label>Færdighedsniveau</label>
-                                        <meter value="3" min="0" max="10"></meter>
-                                        <label>Tekniske Kompetencer</label>
-                                        <meter value="2" min="0" max="10"></meter>
-                                    </div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-brand">
-                                        <iconify-icon icon="simple-icons:adobepremierepro" style="color: #9ef9ff;"
-                                            width="55" height="55"></iconify-icon>
-                                        <span>Premiere Pro</span>
-                                    </div>
-                                    <div class="meter-para">
-                                        <label>Færdighedsniveau</label>
-                                        <meter value="4" min="0" max="10"></meter>
-                                        <label>Tekniske Kompetencer</label>
-                                        <meter value="4" min="0" max="10"></meter>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-item webudvikling" id="webdev" style="display: none;">
+                    <div class="skills-item webudvikling" id="webdev">
                         <div class="meter-content">
                             <div class="meter-grp">
                                 <div class="meter-item">
@@ -247,6 +190,66 @@
                             </div>
                         </div>
                     </div>
+                    <div class="skills-item webdesign" id="webdes" style="display: none;">
+                        <div class="meter-content">
+                            <div class="meter-grp">
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:figma" width="60" height="60"
+                                            style="color: #9ef9ff;"></iconify-icon>
+                                        <span>Figma</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label>Færdighedsniveau</label>
+                                        <meter value="8" min="0" max="10"></meter>
+                                        <label>Tekniske Kompetencer</label>
+                                        <meter value="7" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:adobeillustrator" style="color: #9ef9ff;"
+                                            width="55" height="55"></iconify-icon>
+                                        <span>Illustrator</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label>Færdighedsniveau</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                        <label>Tekniske Kompetencer</label>
+                                        <meter value="3" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="meter-grp">
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:adobephotoshop" style="color: #9ef9ff;"
+                                            width="55" height="55"></iconify-icon>
+                                        <span>Photoshop</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label>Færdighedsniveau</label>
+                                        <meter value="3" min="0" max="10"></meter>
+                                        <label>Tekniske Kompetencer</label>
+                                        <meter value="2" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-brand">
+                                        <iconify-icon icon="simple-icons:adobepremierepro" style="color: #9ef9ff;"
+                                            width="55" height="55"></iconify-icon>
+                                        <span>Premiere Pro</span>
+                                    </div>
+                                    <div class="meter-para">
+                                        <label>Færdighedsniveau</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                        <label>Tekniske Kompetencer</label>
+                                        <meter value="4" min="0" max="10"></meter>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -278,27 +281,28 @@
                     </div>
                 </div>
                 <div class="form-container">
-                    <form novalidate class="form" id="form" onsubmit="return false">
+                    <form novalidate class="form" id="form" onsubmit="sendMail(); return false;">
                         <h1>Bliv kontaktet</h1>
                         <h2>Indtast dine kontaktoplysninger</h2>
                         <div class="input-group">
-                            <input type="text" id="name" placeholder="Navn" required>
-
+                            <input type="text" id="name" name="name" placeholder="Dit navn" required>
                         </div>
                         <div class="input-group">
-                            <input type="email" id="email" placeholder="Mailadresse" required>
+                            <input type="email" id="email" name="email" placeholder="Mailadresse" required>
                         </div>
                         <div class="input-group">
-                            <input type="text" id="phone" placeholder="Mobilnummer" required>
+                            <input type="text" id="phone" name="phone" placeholder="Mobilnummer" required>
                         </div>
                         <div class="input-group">
-                            <textarea style="resize: none;" placeholder="Hvad kan jeg hjælpe med?" name="text"
-                                id="message" cols="" rows="3"></textarea>
+                            <textarea style="resize: none;" placeholder="Hvad kan jeg hjælpe med?" id="message"
+                                name="message" rows="3"></textarea>
                         </div>
+                        <span class="inquiry" id="inquiry-message"></span>
                         <div class="btn-group" id="btn-group">
-                            <button class="form-btn">Send</button>
+                            <button class="form-btn" type="submit">Send</button>
                         </div>
                     </form>
+
                 </div>
             </div>
         </section>
@@ -315,20 +319,21 @@
             <div class="footer-item">
                 <span>&#xa9; 2024 Marcm.dk</span>
             </div>
-            <div class="footer-item socials">
-                <a href="https://www.facebook.com/marcm1703" target="_blank"><iconify-icon
-                        icon="fa6-brands:square-facebook" style="color: #9ef9ff;" width="40"
-                        height="40"></iconify-icon></a>
-                <a href="https://www.linkedin.com/in/marcmoller/" target="_blank"><iconify-icon
-                        icon="fa6-brands:linkedin" style="color: #9ef9ff;" width="45" height="40"></iconify-icon></a>
-                <a href="https://github.com/MarcMadeIt" target="_blank"><iconify-icon icon="fa6-brands:square-github"
-                        style="color: #9ef9ff;" width="40" height="40"></iconify-icon></a>
+            <div class="footer-item socials" id="socials">
             </div>
         </div>
     </footer>
 </body>
 <script src="./src/js/index.js"></script>
 <script src="./src/js/projects.js"></script>
+<script src="./src/js/components.js"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+<!-- EmailJS setting -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    emailjs.init('rO0nfjTJdvvQhgvEi')
+</script>
 
 </html>

@@ -61,20 +61,29 @@ navLinks.forEach(link => {
 
 // Funktion der kan skifte mellem webNum 1 og 2 via, ved brug af displays egenskaber: block og none, så det er skiftende. 
 
-function toggleWeb(webNum) {
-    if (webNum === 1) {
-        document.getElementById('webdes').style.display = 'block';
-        document.getElementById('webdev').style.display = 'none';
-    } else if (webNum === 2) {
-        document.getElementById('webdes').style.display = 'none';
-        document.getElementById('webdev').style.display = 'block';
-    }
-}
+const toggleWeb = (webNum) => {
+    const webdes = document.getElementById('webdes');
+    const webdev = document.getElementById('webdev');
+    const webdesBtn = document.getElementById('webdesBtn');
+    const webdevBtn = document.getElementById('webdevBtn');
+
+    const isWebDevActive = webNum === 1;
+
+    webdes.style.display = isWebDevActive ? 'none' : 'block';
+    webdev.style.display = isWebDevActive ? 'block' : 'none';
+
+    webdevBtn.classList.toggle("activeBtn", isWebDevActive);
+    webdesBtn.classList.toggle("activeBtn", !isWebDevActive);
+};
+
+document.getElementById('webdevBtn').addEventListener('click', () => toggleWeb(1));
+document.getElementById('webdesBtn').addEventListener('click', () => toggleWeb(2));
+
 
 
 // Funktion til at tilføje class .popup-overlay og dernæst id videoPopup, og dermed sætte video tags som autoplay, load og play til. Så det automatisk starter. 
 
-function openPopup(event) {
+const openPopup = (event) => {
     event.preventDefault();
     document.querySelector('.popup-overlay').style.display = 'block';
     const videoPopup = document.getElementById('videoPopup');
@@ -87,20 +96,45 @@ function openPopup(event) {
         video.load();
         video.play();
     }
-}
+};
+
 
 // Close funktion, tilføjer display: none; til videoPopup
 
-function closePopup() {
+const closePopup = () => {
     document.querySelector('.popup-overlay').style.display = 'none';
     const videoPopup = document.getElementById('videoPopup');
     videoPopup.style.display = 'none';
-
 
     // Denne vil sætte videoen på pause, når man forlader videoPopup
     const video = videoPopup.querySelector('.video');
     if (video) {
         video.pause();
     }
-}
+};
 
+
+
+// EmailJS funktion inkl. beskeder  
+
+
+const sendMail = () => {
+    event.preventDefault();
+    const params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_033r29n", "template_25f8vki", params)
+        .then((res) => {
+            console.log("Email sent successfully:", res.status, res.text);
+            document.getElementById("inquiry-message").innerText = "Henvendelse sendt!";
+            document.getElementById("form").reset();
+        })
+        .catch((error) => {
+            console.error("Failed to send email:", error);
+            document.getElementById("inquiry-message").innerText = "Fejl ved afsendelse af henvendelse";
+        });
+};

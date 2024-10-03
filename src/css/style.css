@@ -144,6 +144,8 @@ header {
 .nav {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .nav ul {
@@ -164,6 +166,10 @@ header {
     color: var(--secondary);
     transition: all 500ms ease-in-out;
     filter: drop-shadow(0px 2px 10px #1d43596e) brightness(90%);
+}
+
+.nav-some {
+    display: none;
 }
 
 .menu-open {
@@ -197,6 +203,21 @@ header {
     .nav a {
         color: var(--text);
         font-size: 28px;
+    }
+
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .nav-some {
+        display: flex;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 30px;
     }
 
     .menu-open {
@@ -276,13 +297,13 @@ header {
 
 .intro.animate-load img {
     animation: slideUp 2.2s ease-in-out forwards;
-    animation-delay: .8s;
+    animation-delay: .6s;
 }
 
 .intro.animate-load .intro-txt h1,
 .intro.animate-load .intro-txt span {
     animation: slideDown 2.2s ease-in-out forwards;
-    animation-delay: .8s;
+    animation-delay: .6s;
 }
 
 .intro.animate-load .intro-txt a {
@@ -892,13 +913,13 @@ section {
     color: var(--text);
 }
 
-.skills-btn {
+.skills-buttons {
     display: flex;
     align-items: center;
     padding: 10px;
 }
 
-.skills-btn button {
+.skills-btn {
     padding: 10px 20px;
     background-color: var(--primary);
     color: var(--text);
@@ -909,11 +930,12 @@ section {
     text-transform: uppercase;
 }
 
-.skills-btn button:hover {
-    color: var(--secondary);
+.activeBtn {
+    color: var(--text-2);
 }
 
-.skills-btn hr {
+
+.skills-buttons hr {
     height: 40px;
     width: 0px;
     border: 2px solid var(--text);
@@ -1194,6 +1216,10 @@ section {
     font-size: 8px;
     position: absolute;
     bottom: -20px;
+}
+
+.inquiry {
+    color: var(--secondary);
 }
 
 .form-btn {
