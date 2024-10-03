@@ -60,6 +60,23 @@ body {
     transition: all 500ms;
 }
 
+.btn-active {
+    padding: 5px 15px;
+    background-color: var(--text);
+    color: var(--primary);
+    border-radius: 6px;
+    border: 1px solid var(--ekstra-2);
+    transition: all 500ms;
+    font-weight: 500;
+}
+
+
+.btn-style:active {
+    background-color: var(--primary);
+    color: var(--secondary);
+    transition: all 500ms;
+}
+
 /* Header ---------------------------------------------------- Header*/
 
 header {
@@ -202,21 +219,18 @@ header {
 
     .nav a {
         color: var(--text);
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .nav-content {
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 80px;
     }
 
     .nav-some {
         display: flex;
-        position: absolute;
-        bottom: 100px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        justify-content: center;
         gap: 30px;
     }
 
