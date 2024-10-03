@@ -76,8 +76,19 @@ const toggleWeb = (webNum) => {
     webdesBtn.classList.toggle("activeBtn", !isWebDevActive);
 };
 
-document.getElementById('webdevBtn').addEventListener('click', () => toggleWeb(1));
-document.getElementById('webdesBtn').addEventListener('click', () => toggleWeb(2));
+document.addEventListener('DOMContentLoaded', () => {
+    const webdevBtn = document.getElementById('webdevBtn');
+    const webdesBtn = document.getElementById('webdesBtn');
+
+    if (webdevBtn) {
+        webdevBtn.addEventListener('click', () => toggleWeb(1));
+    }
+
+    if (webdesBtn) {
+        webdesBtn.addEventListener('click', () => toggleWeb(2));
+    }
+});
+
 
 
 

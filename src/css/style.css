@@ -17,6 +17,8 @@
     background: var(--secondary);
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +26,7 @@
     text-decoration: none;
     color: inherit;
     font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -45,6 +48,7 @@ body {
 /* Button style #9ef9ff */
 
 .btn-style {
+    cursor: pointer;
     padding: 5px 15px;
     background-color: var(--primary);
     color: var(--secondary);
@@ -52,15 +56,22 @@ body {
     border: 1px solid var(--ekstra-2);
     transition: all 500ms;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
-.btn-style:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
-    transition: all 500ms;
+@media screen and (min-width: 600px) {
+
+    .btn-style:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+        transition: all 500ms;
+    }
 }
 
 .btn-active {
+    cursor: pointer;
     padding: 5px 15px;
     background-color: var(--secondary);
     color: var(--primary);
@@ -73,10 +84,13 @@ body {
     gap: 7px;
 }
 
-.btn-active:hover {
-    background-color: var(--primary);
-    color: var(--secondary);
-    transition: all 500ms;
+@media screen and (min-width: 600px) {
+
+    .btn-active:hover {
+        background-color: var(--primary);
+        color: var(--secondary);
+        transition: all 500ms;
+    }
 }
 
 /* Header ---------------------------------------------------- Header*/
@@ -1298,8 +1312,10 @@ section {
 .intro-pro {
     margin-top: 150px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 50px;
     height: 300px;
 }
 
@@ -1318,6 +1334,16 @@ section {
 
 .intro-pro-txt h1 {
     font-size: 50px;
+}
+
+
+.project-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-active {
+    outline: 1.5px solid var(--secondary);
 }
 
 .cards {
@@ -1608,7 +1634,7 @@ section {
 }
 
 
-.process-item:nth-child(even) {
+.doc-reverse {
     flex-direction: row-reverse;
 }
 
@@ -1637,6 +1663,11 @@ section {
     position: absolute;
     top: 0;
     left: 30px;
+}
+
+.doc-reverse h2 {
+    right: 30px;
+    left: auto;
 }
 
 

@@ -25,13 +25,12 @@ class MultiMedieDesigner {
         return this.#img;
     }
 
-    setImg() {
+    setImg(img) {
         this.#img = img;
     }
 
-
     getBiography() {
-        return this.#biography
+        return this.#biography;
     }
 
     setBiography(biography) {
@@ -39,7 +38,7 @@ class MultiMedieDesigner {
     }
 
     getSkills() {
-        return this.#skills
+        return this.#skills;
     }
 
     setSkills(skills) {
@@ -52,11 +51,10 @@ class MultiMedieDesigner {
 
     setPortfolioProject(portfolioProject) {
         this.#portfolioProject = portfolioProject;
-
     }
 
     addPortfolioProject(project) {
-        this.#portfolioProject.push(project)
+        this.#portfolioProject.push(project);
     }
 
     filterProjectsBySkill(skill) {
@@ -67,21 +65,32 @@ class MultiMedieDesigner {
             project.projectSkills && project.projectSkills.includes(skill)
         );
     }
-
 }
 
-// definere alle metoderne
-
-
-
-const mydetails = new MultiMedieDesigner("Marc Møller",
+// Define the multimedia designer
+const mydetails = new MultiMedieDesigner(
+    "Marc Møller",
     "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "Web Developer",
     ["HTML", "CSS", "SASS", "Tailwind", "JS", "React", "NextJS", "NodeJS", "Express", "MongoDB", "MySQL"]
-)
+);
 
+// Function to load projects from JSON
+const loadProjects = async () => {
+    try {
+        const response = await fetch('./projects.json'); // Adjust path as necessary
+        if (!response.ok) {
+            throw new Error("Kunne ikke hente projektdata");
+        }
+        const projects = await response.json();
+        mydetails.setPortfolioProject(projects); // Store projects in your object
+        displayProjects(projects); // Initial display
+    } catch (error) {
+        console.error('Fejl ved hentning af data:', error);
+    }
+};
 
-// Funktion til at vise projekterne
+// Function to display projects
 const displayProjects = (projects) => {
     const projectCards = document.getElementById('projectCards');
     projectCards.innerHTML = '';
@@ -89,7 +98,6 @@ const displayProjects = (projects) => {
     projects.forEach((project) => {
         const projectCard = document.createElement('div');
         projectCard.classList.add('project-card');
-
         projectCard.innerHTML = `
             <a href="${project.projectLink}">
                 <div class="card">
@@ -100,40 +108,56 @@ const displayProjects = (projects) => {
                     <h3>${project.projectFlow}</h3>
                     <h4>${project.projectName}</h4>
                     <div class="tags">
-                    ${project.projectSkills.map(skill => `<span>${skill}</span>`).join(' ')}
+                        ${project.projectSkills.map(skill => `<span>#${skill}</span>`).join(' ')} <!-- Prepend # to each skill -->
                     </div>
                     <p>${project.projectDesc}</p>
                     <button>Se projektet</button>
                 </div>
             </a>
         `;
-
         projectCards.appendChild(projectCard);
     });
-}
+};
 
-const loadProjects = async () => {
-    try {
-        const response = await fetch('./projects.json');
-        if (!response.ok) {
-            throw new Error("Kunne ikke hente projektdata");
+// Filter functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const filterHTML = document.getElementById('filterHTML');
+    const filterCSS = document.getElementById('filterCSS');
+    const filterJS = document.getElementById('filterJS');
+    const filterAll = document.getElementById('filterAll');
+
+    const updateProjectDisplay = (skill) => {
+
+        const filterButtons = document.querySelectorAll('.btn-style');
+        filterButtons.forEach(button => button.classList.remove('filter-active'));
+
+
+        const activeButton = Array.from(filterButtons).find(button => button.id === `filter${skill}`);
+        if (activeButton) {
+            activeButton.classList.add('filter-active');
+        } else {
+            filterAll.classList.add('filter-active');
         }
-        const projects = await response.json();
-        displayProjects(projects);
-    } catch (error) {
-        console.error('Fejl ved hentning af data:', error);
-    }
-}
+
+        const filteredProjects = mydetails.filterProjectsBySkill(skill.replace('#', ''));
+        displayProjects(filteredProjects);
+    };
+
+    filterAll.addEventListener('click', () => updateProjectDisplay("all"));
+    filterHTML.addEventListener('click', () => updateProjectDisplay("HTML"));
+    filterCSS.addEventListener('click', () => updateProjectDisplay("CSS"));
+    filterJS.addEventListener('click', () => updateProjectDisplay("JS"));
+});
 
 
+// Function to display the latest projects
 const displayLatest = (projects) => {
     const latestCards = document.getElementById('projectLatest');
     latestCards.innerHTML = '';
 
-
     projects.forEach((project) => {
         const latestCard = document.createElement('div');
-        latestCard.classList.add('pro-item')
+        latestCard.classList.add('pro-item');
 
         latestCard.innerHTML = `
             <a href="${project.projectLink}">
@@ -145,12 +169,11 @@ const displayLatest = (projects) => {
             </a>
         `;
 
-        latestCards.appendChild(latestCard)
+        latestCards.appendChild(latestCard);
     });
+};
 
-}
-
-
+// Load the latest projects
 const loadLatest = async () => {
     try {
         const getLatest = await fetch('./projects/projects.json');
@@ -160,21 +183,22 @@ const loadLatest = async () => {
 
         const projects = await getLatest.json();
         const threeFirst = projects.slice(0, 3);
-
-        displayLatest(threeFirst)
+        displayLatest(threeFirst);
     } catch (error) {
-        console.error('Kan ikke hente seneste projekter', error)
+        console.error('Kan ikke hente seneste projekter', error);
     }
-}
+};
 
-
+// Load data on window load
 window.onload = () => {
     const path = window.location.pathname;
 
-    if (path.includes("/") || path === "") {
+    // Load latest projects only on the base URL
+    if (path === "/" || path === "") {
         loadLatest();
     }
 
+    // Load project data when on the "/projects/" path
     if (path.includes("/projects/")) {
         loadProjects();
     }
