@@ -93,6 +93,7 @@ body {
     }
 }
 
+
 /* Header ---------------------------------------------------- Header*/
 
 header {
@@ -548,7 +549,7 @@ section {
         box-shadow: #00000073 0 0 15px;
         left: 39px;
         top: 720px;
-        height: 3500px;
+        height: 3400px;
     }
 
     .circle-title h1 {
@@ -705,7 +706,7 @@ section {
 @media screen and (max-width: 600px) {
 
     .presentation {
-        height: 1050px;
+        height: 900px;
     }
 
     .pre-content {
@@ -1343,7 +1344,7 @@ section {
 }
 
 .filter-active {
-    outline: 1.5px solid var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 .cards {

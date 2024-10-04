@@ -11,7 +11,7 @@
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -46,6 +46,26 @@
 .back-btn:hover {
     opacity: 100%;
     transform: scale(1.1);
+}
+
+.scroll-watcher {
+    height: 4px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary);
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+
+    /* Can add transform-origin: left; */
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
 }
 
 

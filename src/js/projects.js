@@ -127,10 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterAll = document.getElementById('filterAll');
 
     const updateProjectDisplay = (skill) => {
-
         const filterButtons = document.querySelectorAll('.btn-style');
         filterButtons.forEach(button => button.classList.remove('filter-active'));
-
 
         const activeButton = Array.from(filterButtons).find(button => button.id === `filter${skill}`);
         if (activeButton) {
@@ -143,10 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
         displayProjects(filteredProjects);
     };
 
-    filterAll.addEventListener('click', () => updateProjectDisplay("all"));
-    filterHTML.addEventListener('click', () => updateProjectDisplay("HTML"));
-    filterCSS.addEventListener('click', () => updateProjectDisplay("CSS"));
-    filterJS.addEventListener('click', () => updateProjectDisplay("JS"));
+    if (filterAll) filterAll.addEventListener('click', () => updateProjectDisplay("all"));
+    if (filterHTML) filterHTML.addEventListener('click', () => updateProjectDisplay("HTML"));
+    if (filterCSS) filterCSS.addEventListener('click', () => updateProjectDisplay("CSS"));
+    if (filterJS) filterJS.addEventListener('click', () => updateProjectDisplay("JS"));
 });
 
 
