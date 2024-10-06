@@ -1644,6 +1644,16 @@ section {
     flex-direction: column;
 }
 
+.doc-backlog {
+    width: 100%;
+}
+
+.doc-backlog img {
+    width: 100%;
+    height: 100%;
+}
+
+
 .doc-txt {
     flex: 1;
     display: flex;
@@ -1655,7 +1665,9 @@ section {
 }
 
 .doc-plan-txt {
-    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 .doc-txt h2 {

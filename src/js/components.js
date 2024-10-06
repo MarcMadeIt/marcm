@@ -1,4 +1,7 @@
 
+
+// Denne function er et eksempel på hvordan jeg kan lave components og den flere forskellige steder
+
 class SoMe {
     renderSoMe() {
         return `

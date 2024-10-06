@@ -1,3 +1,5 @@
+// Her bruger jeg OOP til at indkapsle data og oprette klasser der definere egenskaberne og kan håndtere et projekt fx.
+
 class MultiMedieDesigner {
     #name
     #img
@@ -67,30 +69,30 @@ class MultiMedieDesigner {
     }
 }
 
-// Define the multimedia designer
+// definere mine detaljer som multimedesigner
 const mydetails = new MultiMedieDesigner(
     "Marc Møller",
-    "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "Web Developer",
-    ["HTML", "CSS", "SASS", "Tailwind", "JS", "React", "NextJS", "NodeJS", "Express", "MongoDB", "MySQL"]
+    "../../assets/img/profile/profile-website.png",
+    "Multimediedesigner",
+    ["HTML", "CSS", "SASS", "JS", "React", "Photoshop", "Illustrator", "Figma", "InDesign", "PremierPro"]
 );
 
-// Function to load projects from JSON
+// Funktion til at fetche / indhente data fra min oprettet .json fil. 
 const loadProjects = async () => {
     try {
-        const response = await fetch('./projects.json'); // Adjust path as necessary
+        const response = await fetch('./projects.json');
         if (!response.ok) {
             throw new Error("Kunne ikke hente projektdata");
         }
         const projects = await response.json();
-        mydetails.setPortfolioProject(projects); // Store projects in your object
-        displayProjects(projects); // Initial display
+        mydetails.setPortfolioProject(projects);
+        displayProjects(projects);
     } catch (error) {
         console.error('Fejl ved hentning af data:', error);
     }
 };
 
-// Function to display projects
+// Funktion til vise indhold og hvilken opstilling det skal sættes i HTML
 const displayProjects = (projects) => {
     const projectCards = document.getElementById('projectCards');
     projectCards.innerHTML = '';
@@ -119,7 +121,7 @@ const displayProjects = (projects) => {
     });
 };
 
-// Filter functionality
+// Funktion til at filtrer ift til kodning skills. 
 document.addEventListener('DOMContentLoaded', () => {
     const filterHTML = document.getElementById('filterHTML');
     const filterCSS = document.getElementById('filterCSS');
@@ -171,7 +173,7 @@ const displayLatest = (projects) => {
     });
 };
 
-// Load the latest projects
+// Funktion til at indhente kun tre af de seneste (øverste) projekter fra min .json fil.
 const loadLatest = async () => {
     try {
         const getLatest = await fetch('./projects/projects.json');
@@ -187,16 +189,14 @@ const loadLatest = async () => {
     }
 };
 
-// Load data on window load
+// onloader de to funktioner på være deres side, ellers vil den forsøge at oploade begge steder, og give error.
 window.onload = () => {
     const path = window.location.pathname;
 
-    // Load latest projects only on the base URL
     if (path === "/" || path === "") {
         loadLatest();
     }
 
-    // Load project data when on the "/projects/" path
     if (path.includes("/projects/")) {
         loadProjects();
     }
