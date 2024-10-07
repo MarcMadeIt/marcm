@@ -1639,6 +1639,10 @@ section {
     flex-direction: row-reverse;
 }
 
+.doc-plan-txt {
+    flex-direction: row;
+}
+
 
 .doc-planning {
     flex-direction: column;
@@ -1786,6 +1790,10 @@ section {
 
     .doc-txt h3 {
         font-size: 20px;
+    }
+
+    .doc-plan-txt {
+        flex-direction: column;
     }
 
     .doc-txt p,
