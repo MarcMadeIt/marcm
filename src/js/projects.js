@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterHTML = document.getElementById('filterHTML');
     const filterCSS = document.getElementById('filterCSS');
     const filterJS = document.getElementById('filterJS');
+    const filterReact = document.getElementById('filterReact');
     const filterAll = document.getElementById('filterAll');
 
     const updateProjectDisplay = (skill) => {
@@ -147,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterHTML) filterHTML.addEventListener('click', () => updateProjectDisplay("HTML"));
     if (filterCSS) filterCSS.addEventListener('click', () => updateProjectDisplay("CSS"));
     if (filterJS) filterJS.addEventListener('click', () => updateProjectDisplay("JS"));
+    if (filterReact) filterReact.addEventListener('click', () => updateProjectDisplay("React"));
 });
 
 
